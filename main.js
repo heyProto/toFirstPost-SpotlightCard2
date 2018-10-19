@@ -6,33 +6,33 @@ window.ProtoGraph = window.ProtoGraph || {};
 window.ProtoGraph.Card = window.ProtoGraph.Card || {};
 
 
-ProtoGraph.Card.toRecordLandConflict = function() {
-    this.cardType = 'Land Conflict Watch';
+ProtoGraph.Card.toRecordMeToo = function() {
+    this.cardType = 'Me Too';
 }
 
-ProtoGraph.Card.toRecordLandConflict.prototype.init = function(options) {
+ProtoGraph.Card.toRecordMeToo.prototype.init = function(options) {
     this.options = options;
 }
 
-ProtoGraph.Card.toRecordLandConflict.prototype.getData = function(data) {
+ProtoGraph.Card.toRecordMeToo.prototype.getData = function(data) {
     return this.containerInstance.exportData();
 }
 
-ProtoGraph.Card.toRecordLandConflict.prototype.renderCol7 = function(data) {
+ProtoGraph.Card.toRecordMeToo.prototype.renderCol7 = function(data) {
     this.mode = 'col7';
     this.render();
 }
-ProtoGraph.Card.toRecordLandConflict.prototype.renderCol4 = function(data) {
+ProtoGraph.Card.toRecordMeToo.prototype.renderCol4 = function(data) {
     this.mode = 'col4';
     this.render();
 }
 
-ProtoGraph.Card.toRecordLandConflict.prototype.renderScreenshot = function(data) {
+ProtoGraph.Card.toRecordMeToo.prototype.renderScreenshot = function(data) {
     this.mode = 'screenshot';
     this.render();
 }
 
-ProtoGraph.Card.toRecordLandConflict.prototype.render = function() {
+ProtoGraph.Card.toRecordMeToo.prototype.render = function() {
    ReactDOM.render(
     <Card
       dataURL={this.options.data_url}

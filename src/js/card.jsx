@@ -204,16 +204,18 @@ export default class toCard extends React.Component {
         <div
           id="protograph_div"
           className="protograph-col7-mode">
-          <div className="lcw-card">
-            <div className="card-title">{data.name_of_conflict}</div>
-            <div className="card-tabs">{this.renderTabs()}  </div>
-            <div className="card-content">
-              {this.renderTabContent(this.state.activeCounter)}
-            </div>
-            <div className="card-footer">
-              <img src={'https://cdn.protograph.pykih.com/089131ca8ef9a3dcaad8/img/lcw-logo.png'}/>
-            </div>
-          </div>         
+          Source URL: {data.source_url}<br />
+          Text: {data.text}<br />
+          Created at: {data.created_at}<br />
+          Platform: {data.source_platform}<br />
+          Accused name: {data.accused_name}<br />
+          Accused org: {data.accused_org}<br />
+          Accused handle: {data.accused_handle}<br />
+          Complainant name: {data.complainant_name}<br />
+          Complainant handle: {data.complainant_handle}<br />
+          Nature: {data.nature}<br />
+          Industry: {data.industry}<br />
+          Context: {data.context}
         </div>
       )
     }
@@ -227,21 +229,20 @@ export default class toCard extends React.Component {
       return (
         <div
           id="protograph_div"
-          className="protograph-col4-mode">
-          <div className="lcw-card lcw-card-mobile">
-            <div className="tabContent">
-            <div className="card-title card-title-mobile">{data.name_of_conflict}</div>
-              <div className="card-tabs card-tabs-mobile">
-              {this.renderTabs()}  
-              </div>
-              <div className="tab-content">
-                  {this.renderTabContent(this.state.activeCounter)}
-              </div>
-            </div>  
-              <div className="card-footer card-footer-mobile">
-                <img src={'https://cdn.protograph.pykih.com/089131ca8ef9a3dcaad8/img/lcw-logo.png'}/>
-              </div>
-            </div>         
+          className="protograph-col4-mode"> 
+          Source URL: {data.source_url}<br />
+          Text: {data.text}<br />
+          Created at: {data.created_at}<br />
+          Platform: {data.source_platform}<br />
+          Accused name: {data.accused_name}<br />
+          Accused org: {data.accused_org}<br />
+          Accused handle: {data.accused_handle}<br />
+          Complainant name: {data.complainant_name}<br />
+          Complainant handle: {data.complainant_handle}<br />
+          Nature: {data.nature}<br />
+          Industry: {data.industry}<br />
+          Context: {data.context}
+
         </div>
       )
     }
