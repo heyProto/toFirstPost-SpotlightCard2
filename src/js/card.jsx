@@ -204,10 +204,13 @@ export default class toCard extends React.Component {
         <div
           id="protograph_div"
           className="protograph-col7-mode">
-          Source URL: {data.source_url}<br />
+          Social URL: {data.social_url}<br />
+          Social platform: {data.social_platform}<br />
+          News URL: {data.news_url}<br />
+          News platform: {data.news_platform}<br />
+          Reported on: {data.reported_on}<br />
           Text: {data.text}<br />
           Created at: {data.created_at}<br />
-          Platform: {data.source_platform}<br />
           Accused name: {data.accused_name}<br />
           Accused org: {data.accused_org}<br />
           Accused handle: {data.accused_handle}<br />

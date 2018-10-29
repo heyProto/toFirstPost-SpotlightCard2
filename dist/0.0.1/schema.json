@@ -7,10 +7,21 @@
     "data": {
       "id": "/properties/data",
       "properties": {
-        "source_url": {
-          "id": "/properties/data/properties/source_url",
+        "news_url": {
+          "id": "/properties/data/properties/news_url",
           "type": "string",
-          "title": "Source URL"
+          "title": "News URL"
+        },
+        "reported_on": {
+          "id": "/properties/data/properties/reported_on",
+          "type": "string",
+          "title": "Reported On",
+          "enum": ["News Media", "Social Media"]
+        },
+        "news_platform": {
+          "id": "/properties/data/properties/news_platform",
+          "type": "string",
+          "title": "News Platform"
         },
         "nature": {
           "id": "/properties/data/properties/nature",
@@ -18,24 +29,21 @@
           "items": {
             "type":"string",
             "enum":[
-              "Sexual assault",
-              "Groping",
               "Unwelcome sexual advances",
-              "Demanding nude pictures",
-              "Touching without consent",
-              "Stalking",
+              "Groping",
               "Forced kissing",
-              "Obscene behaviour",
-              "Harassment - not clear",
-              "Staring in a lewd manner",
-              "Rape",
+              "Harassment",
               "Persistent pursuing",
+              "Obscene behaviour",
+              "Ogling",
+              "Sexual assault",
+              "Groping/Touching without consent",
+              "Not clear",
+              "Demanding nude pictures",
+              "Obscene online behaviour",
               "Humiliating",
-              "Abuse",
-              "Online harassment",
-              "Sexual bullying and harassment",
-              "To discuss",
-              "Not clear"
+              "Stalking",
+              "Violent behaviour"
             ]
           },
           "uniqueItems": "true",
@@ -51,16 +59,21 @@
           "type": "string",
           "title": "Created At"
         },
-        "source_platform": {
+        "social_platform": {
           "id": "/properties/data/properties/source_platform",
           "type": "string",
           "title": "Source Platform"
+        },
+        "social_url": {
+          "id": "/properties/data/properties/social_url",
+          "type": "string",
+          "title": "Social URL"
         },
         "industry": {
           "id": "/properties/data/properties/industry",
           "type": "string",
           "title": "Industry",
-          "enum": ["News Media", "Journalism College", "Bollywood", "Film Industry", "Stand-up Comedy", "Comedy", "Law"]
+          "enum": ["News", "Journalism College", "Films", "Music", "Comedy", "Media", "Not clear"]
         },
         "accused_name": {
           "id": "/properties/data/properties/accused_name",

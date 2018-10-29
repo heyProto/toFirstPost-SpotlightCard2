@@ -1,16 +1,18 @@
 {
     "data": {
-        "source_url": "https://twitter.com/radiantbear/status/1048451309513261061",
-        "text": "@TheRestlessQuil @AnooBhu @photowallah @shubhangisapien The near sexual assault episode with Zulfi Syed occurred on a cruise liner. A bunch of press photographers, journalists, models and people were invited on board overnight as a PR exercise. I was there with a woman colleague to shoot and cover the event.",
-        "created_at": "6/10/2018 5:54:00",
-        "source_platform": "Twitter",
-        "accused_name": "Zulfi Syed",
+        "news_url": "https://www.firstpost.com/india/metoo-mj-akbars-use-of-predatory-tactics-sexual-harassment-in-newsroom-14-women-share-their-ordeal-5359861.html",
+        "reported_on": "News Media",
+        "news_platform": "Firstpost",
+        "text": "@prasanto @priyaramani In this case, #MeToo. Year: 1995, Place Taj Bengal, Kolkata. After that encounter, I declined the job offer.",
+        "created_at": "8/10/2018 13:49:00",
+        "social_platform": "Twitter",
+        "social_url": "https://twitter.com/ShumaRaha/status/1049295817369161730",
+        "accused_name": "M J Akbar",
         "accused_org": "",
         "accused_handle": "",
-        "complainant_name": "Natasha Hemrajani",
-        "complainant_handle": "@radiantbear",
-        "industry": "Bollywood",
-        "context": "Not Clear",
-        "nature": ["Sexual assault"]
-    }
+        "complainant_name": "Shuma Raha",
+        "complainant_handle": "@ShumaRaha",
+        "industry": "News",
+        "context": "Professional",
+        "nature" : ["Not clear"]  }
 }
