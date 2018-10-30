@@ -18,15 +18,6 @@ ProtoGraph.Card.toRecordMeToo.prototype.getData = function(data) {
     return this.containerInstance.exportData();
 }
 
-ProtoGraph.Card.toRecordMeToo.prototype.renderCol7 = function(data) {
-    this.mode = 'col7';
-    this.render();
-}
-ProtoGraph.Card.toRecordMeToo.prototype.renderCol4 = function(data) {
-    this.mode = 'col4';
-    this.render();
-}
-
 ProtoGraph.Card.toRecordMeToo.prototype.renderScreenshot = function(data) {
     this.mode = 'screenshot';
     this.render();

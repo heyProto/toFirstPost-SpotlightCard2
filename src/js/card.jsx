@@ -12,7 +12,6 @@ export default class toCard extends React.Component {
       optionalConfigJSON: {},
       languageTexts: undefined,
       siteConfigs: this.props.siteConfigs,
-      activeCounter : 1
     };
 
     if (this.props.dataJSON) {
@@ -42,7 +41,6 @@ export default class toCard extends React.Component {
           fetchingData: false,
           dataJSON: card.data,
           optionalConfigJSON:{},
-          activeCounter:1
         };
         this.setState(stateVar);
       }));
@@ -57,209 +55,54 @@ export default class toCard extends React.Component {
     }
   }
 
-
-  selectTab(tab){
-    this.setState({activeCounter:tab+1});
-  }
-
-  renderTabs(){
-      let tabs =['overview','details','narrative','sources'];
-      let tabNames;
-      
-      tabNames = tabs.map((card,i)=>{
-      let tabClass;
-      tabClass = (this.state.activeCounter == i+1)  ? ((this.state.mode == "col-7")?"single-tab active":"single-tab single-tab-mobile active") : ((this.state.mode == "col-7")?"single-tab":"single-tab single-tab-mobile");
-      return(
-          <div key={i.toString()} className={tabClass} style={{cursor:"pointer"}} onClick={()=>this.selectTab(i)}>{tabs[i]}</div>
-      )
-      });
-      return tabNames;
-  }
-
-  getNature(natures){
-    return natures.join(', ')
-  }
-  
-  renderTabContent(tab){
-    let data = this.state.dataJSON.data;
-    switch(tab){
-      case 1:
-        let summary = this.state.dataJSON.data.summary;
-        summary = summary.substr(0,summary.indexOf(" ",183))+'....';
-        console.log(summary)
-        return(
-            <div>
-              <div className="half-width-parameter">
-                <div className="single-parameter">
-                  <div className="parameter-label">REASONS/NATURE OF LAND CONFLICT</div>
-                  <p>{this.getNature(data.nature_of_land_conflict)}</p>
-                </div>
-                <div className="single-parameter">
-                  <div className="parameter-label">SECTOR/TYPE OF INDUSTRY</div>
-                  <p>{data.type_of_industry}</p>
-                </div>
-                <div className="single-parameter">
-                  <div className="parameter-label">NO. OF HOUSEHOLD AFFECTED</div>
-                  <p>{data.no_of_household_affected}</p>
-                </div>
-                <div className="single-parameter">
-                  <div className="parameter-label">INVESTMENT (IN CRORES, Rs.)</div>
-                  <p>{data.investment}</p>
-                </div>
-                <div className="single-parameter">
-                  <div className="parameter-label">LAND AREA AFFECTED</div>
-                  <p>{data.land_area_affected} acre</p>
-                </div>
-              </div>
-              <div className="half-width-parameter">
-                <div className="single-parameter">
-                  <div className="parameter-label">VILLAGE/TOWN</div>
-                  <p>{data.village}</p>
-                </div>
-                <div className="single-parameter">
-                  <div className="parameter-label">DISTRICT</div>
-                  <p>{data.district}</p>
-                </div>
-                <div className="single-parameter">
-                  <div className="parameter-label">PROVINCE</div>
-                  <p>{data.state}</p>
-                </div>
-                <div className="single-parameter">
-                  <div className="parameter-label">STARTING YEAR</div>
-                  <p>{data.year}</p>
-                </div>
-              </div>               
-              <div className="single-parameter">
-                <div className="parameter-label">Summary/Narrative</div>
-                  <p>{summary}<a onClick={()=>this.selectTab(2)} style={{cursor:"pointer"}} >continue reading</a></p>
-              </div>
-            </div>
-        )
-        break;
-      case 2:
-        return(
-            <div>
-              <div className="half-width-parameter">
-                <div className="single-parameter">
-                  <div className="parameter-label">Parties involved</div>
-                    <div className="parameter-small-label">State</div>
-                    <p>{data.parties_involved_state}</p>
-                    <div className="parameter-small-label">Corporate</div>
-                    <p>{data.parties_involved_corporate}</p>
-                    <div className="parameter-small-label">Community/Local organisations</div>
-                    <p>{data.parties_involved_local}</p>
-                    <div className="parameter-small-label">Others</div>
-                    <p>{data.parties_involved_others}</p>
-                </div>
-              </div>
-              <div className="half-width-parameter">
-                  <div className="single-parameter">
-                    <div className="parameter-label">Type of Land</div>
-                    <p>{data.type_of_land}</p>
-                  </div>
-                  <div className="single-parameter">
-                    <div className="parameter-label">Type of Common Land</div>
-                    <p>{data.type_of_common_land}</p>
-                  </div>
-              </div>
-              <div className="single-parameter">
-                <div className="parameter-label">Major Human Rights Violations related to the conflict</div>
-                <p>{data.major_human_rights_violation_related_to_conflict}</p>
-              </div>
-            </div>
-        )
-        break;
-      case 3:  
-        return(
-          <p>
-            {data.summary}
-          </p>
-        )
-      case 4:
-        return(
-          <div>
-            <div className="single-parameter">
-              <div className="parameter-label">Source of information</div>
-              <p>{data.source_of_information}</p>
-            </div>
-            <div className="single-parameter">
-              <div className="parameter-label">Links</div>
-              <p>
-                {data.links}
-              </p>
-            </div>
-          </div>
-        )    
-    } 
-
-  }
-
-  renderCol7() {
-    let data = this.state.dataJSON.data;
-    if (this.state.fetchingData ){
-      return(<div>Loading</div>)
-    }
-    else { 
-      return (
-        <div
-          id="protograph_div"
-          className="protograph-col7-mode">
-          Social URL: {data.social_url}<br />
-          Social platform: {data.social_platform}<br />
-          News URL: {data.news_url}<br />
-          News platform: {data.news_platform}<br />
-          Reported on: {data.reported_on}<br />
-          Text: {data.text}<br />
-          Created at: {data.created_at}<br />
-          Accused name: {data.accused_name}<br />
-          Accused org: {data.accused_org}<br />
-          Accused handle: {data.accused_handle}<br />
-          Complainant name: {data.complainant_name}<br />
-          Complainant handle: {data.complainant_handle}<br />
-          Nature: {data.nature}<br />
-          Industry: {data.industry}<br />
-          Context: {data.context}
-        </div>
-      )
-    }
-  }
-
-  renderCol4() {
+  renderCard() {
     if (this.state.fetchingData) {
       return (<div>Loading</div>)
     } else {
-      let data = this.state.dataJSON.data;
+      let card = this.state.dataJSON.data;
       return (
         <div
-          id="protograph_div"
-          className="protograph-col4-mode"> 
-          Source URL: {data.source_url}<br />
-          Text: {data.text}<br />
-          Created at: {data.created_at}<br />
-          Platform: {data.source_platform}<br />
-          Accused name: {data.accused_name}<br />
-          Accused org: {data.accused_org}<br />
-          Accused handle: {data.accused_handle}<br />
-          Complainant name: {data.complainant_name}<br />
-          Complainant handle: {data.complainant_handle}<br />
-          Nature: {data.nature}<br />
-          Industry: {data.industry}<br />
-          Context: {data.context}
+            className="protograph-grid-card protograph-trigger-modal protograph-card">
+            <a href={card.source_url} target="_blank">
+              <div className="proto-social-post-card">
+                <div className="post-content">
+                <div className="post-category">
+                    <div className="post-category-title">ACCUSED</div>
+                    <div className="post-category-data">{card.accused_name? card.accused_name: 'Unknown'}</div> 
+                  </div>
+                  
+                </div>
+                
+                
+                <div className="post-categories">
 
-        </div>
+                  <div className="post-category">
+                    <div className="post-category-title">COMPLAINANT</div>
+                    <div className="post-category-data">{card.complainant_name? card.complainant_name: 'Unknown'}</div>
+                  </div>
+
+                  <div className="post-category">
+                    <div className="post-category-title">NATURE OF HARASSMENT</div>
+                    <div className="post-category-data">{card.nature && card.nature.length>0? card.nature.join(', '): 'Unknown'}</div>
+                  </div>
+
+                  
+                
+                </div>
+
+                <div className="social-icons">
+                <div className="post-category-data">{(card.news_platform != 'Social Media') && (<a href={card.news_url} className="news-link">{card.news_platform}</a>)}</div>
+                  {card.social_platform == 'Facebook' && (<a href={card.social_url}><img src="https://cdn.protograph.pykih.com/Assets/social-icons/facebook-outline.png" className="card-social" /></a>)}
+                  {card.social_platform == 'Twitter' && (<a href={card.social_url}><img src="https://cdn.protograph.pykih.com/Assets/social-icons/twitter-outline.png" className="card-social" /></a>)}
+                </div>
+              </div>
+            </a>
+          </div>
       )
     }
   }
 
-
   render() {
-    switch(this.props.mode) {
-      case 'col7' :
-        return this.renderCol7();
-        break;
-      case 'col4':
-        return this.renderCol4();
-        break;
-    }
+    return this.renderCard();
   }
 }

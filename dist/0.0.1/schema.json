@@ -7,21 +7,35 @@
     "data": {
       "id": "/properties/data",
       "properties": {
-        "news_url": {
-          "id": "/properties/data/properties/news_url",
+        "accused_name": {
+          "id": "/properties/data/properties/accused_name",
           "type": "string",
-          "title": "News URL"
+          "title": "Accused Name"
         },
-        "reported_on": {
-          "id": "/properties/data/properties/reported_on",
+        "accused_org": {
+          "id": "/properties/data/properties/accused_org",
           "type": "string",
-          "title": "Reported On",
-          "enum": ["News Media", "Social Media"]
+          "title": "Accused Organisation"
         },
-        "news_platform": {
-          "id": "/properties/data/properties/news_platform",
+        "accused_handle": {
+          "id": "/properties/data/properties/accused_handle",
           "type": "string",
-          "title": "News Platform"
+          "title": "Accused Handle"
+        },
+        "complainant_name": {
+          "id": "/properties/data/properties/complainant_name",
+          "type": "string",
+          "title": "Complainant Name"
+        },
+        "complainant_handle": {
+          "id": "/properties/data/properties/complainant_handle",
+          "type": "string",
+          "title": "Complainant Handle"
+        },
+        "text": {
+          "id": "/properties/data/properties/text",
+          "type": "string",
+          "title": "Text"
         },
         "nature": {
           "id": "/properties/data/properties/nature",
@@ -49,15 +63,34 @@
           "uniqueItems": "true",
           "title": "Nature of harassment"
         },
-        "text": {
-          "id": "/properties/data/properties/text",
+        "industry": {
+          "id": "/properties/data/properties/industry",
           "type": "string",
-          "title": "Text"
+          "title": "Industry",
+          "enum": ["News", "Journalism College", "Films", "Music", "Comedy", "Media", "Not clear"]
         },
-        "created_at": {
-          "id": "/properties/data/properties/created_at",
+        "context": {
+          "id": "/properties/data/properties/context",
           "type": "string",
-          "title": "Created At"
+          "title": "Context",
+          "enum": ["Personal", "Professional", "Not Clear", "Not Applicable"]
+        },
+        
+        "reported_on": {
+          "id": "/properties/data/properties/reported_on",
+          "type": "string",
+          "title": "Reported On",
+          "enum": ["News Media", "Social Media"]
+        },
+        "news_platform": {
+          "id": "/properties/data/properties/news_platform",
+          "type": "string",
+          "title": "News Platform"
+        },
+        "news_url": {
+          "id": "/properties/data/properties/news_url",
+          "type": "string",
+          "title": "News URL"
         },
         "social_platform": {
           "id": "/properties/data/properties/source_platform",
@@ -69,42 +102,10 @@
           "type": "string",
           "title": "Social URL"
         },
-        "industry": {
-          "id": "/properties/data/properties/industry",
+        "created_at": {
+          "id": "/properties/data/properties/created_at",
           "type": "string",
-          "title": "Industry",
-          "enum": ["News", "Journalism College", "Films", "Music", "Comedy", "Media", "Not clear"]
-        },
-        "accused_name": {
-          "id": "/properties/data/properties/accused_name",
-          "type": "string",
-          "title": "Accused Name"
-        },
-        "accused_org": {
-          "id": "/properties/data/properties/accused_org",
-          "type": "string",
-          "title": "Accused Organisation"
-        },
-        "accused_handle": {
-          "id": "/properties/data/properties/accused_handle",
-          "type": "string",
-          "title": "Accused Handle"
-        },
-        "complainant_name": {
-          "id": "/properties/data/properties/complainant_name",
-          "type": "string",
-          "title": "Complainant Name"
-        },
-        "complainant_handle": {
-          "id": "/properties/data/properties/complainant_handle",
-          "type": "string",
-          "title": "Complainant Handle"
-        },
-        "context": {
-          "id": "/properties/data/properties/context",
-          "type": "string",
-          "title": "Context",
-          "enum": ["Personal", "Professional", "Not Clear", "Not Applicable"]
+          "title": "Created At"
         }
       },
       "title": "Card Data",

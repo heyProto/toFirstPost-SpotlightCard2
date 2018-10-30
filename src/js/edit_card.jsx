@@ -10,7 +10,6 @@ export default class editToCard extends React.Component {
     this.state = {
       step: 1,
       dataJSON: {},
-      mode: "col7",
       publishing: false,
       schemaJSON: undefined,
       fetchingData: true,
@@ -18,7 +17,6 @@ export default class editToCard extends React.Component {
       optionalConfigSchemaJSON: undefined,
       uiSchemaJSON: {}
     }
-    this.toggleMode = this.toggleMode.bind(this);
   }
 
   exportData() {
@@ -161,24 +159,6 @@ export default class editToCard extends React.Component {
     });
   }
 
-  toggleMode(e) {
-    let element = e.target.closest('a'),
-      mode = element.getAttribute('data-mode');
-
-    this.setState((prevState, props) => {
-      let newMode;
-      if (mode !== prevState.mode) {
-        newMode = mode;
-      } else {
-        newMode = prevState.mode
-      }
-
-      return {
-        mode: newMode
-      }
-    })
-  }
-
   render() {
     if (this.state.fetchingData) {
       return(<div>Loading</div>)
@@ -205,22 +185,6 @@ export default class editToCard extends React.Component {
                 </JSONSchemaForm>
               </div>
               <div className="twelve wide column proto-card-preview proto-share-card-div">
-                <div className="protograph-menu-container">
-                  <div className="ui compact menu">
-                    <a className={`item ${this.state.mode === 'col7' ? 'active' : ''}`}
-                      data-mode='col7'
-                      onClick={this.toggleMode}
-                    >
-                      col-7
-                    </a>
-                    <a className={`item ${this.state.mode === 'col4' ? 'active' : ''}`}
-                      data-mode='col4'
-                      onClick={this.toggleMode}
-                    >
-                      col-4
-                    </a>
-                  </div>
-                </div>
                 <div className="protograph-app-holder">
                   <Card
                     mode={this.state.mode}
