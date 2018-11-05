@@ -1,18 +1,25 @@
 {
     "data": {
-        "news_url": "https://www.firstpost.com/india/metoo-mj-akbars-use-of-predatory-tactics-sexual-harassment-in-newsroom-14-women-share-their-ordeal-5359861.html",
+        "news_url": "https://scroll.in/article/898211/11-women-recall-how-journalist-cp-surendran-sexually-harassed-them-he-dismisses-them-as-lynch-mob",
         "reported_on": "News Media",
-        "news_platform": "Firstpost",
-        "text": "@prasanto @priyaramani In this case, #MeToo. Year: 1995, Place Taj Bengal, Kolkata. After that encounter, I declined the job offer.",
-        "created_at": "8/10/2018 13:49:00",
-        "social_platform": "Twitter",
-        "social_url": "https://twitter.com/ShumaRaha/status/1049295817369161730",
-        "accused_name": "M J Akbar",
-        "accused_org": "",
+        "news_platform": "Scroll",
+        "text": "She accepted his invitation to take a walk when he suddenly came very close to her and used a pick-up line on her in the middle of a normal conversation. Majumdar goes on to describe how later in the evening she returned to her hotel room and found out that Surendran’s room was next to hers with a shared terrace space where she bumped into him again. He suggested that they move into his room. When she declined, he massaged her neck and shoulders despite her protests.",
+        "created_at": "14/10/2018 20:47:09",
+        "social_platform": "Scroll.in",
+        "social_url": "https://scroll.in/article/898211/11-women-recall-how-journalist-cp-surendran-sexually-harassed-them-he-dismisses-them-as-lynch-mob",
+        "accused_name": "C P Surendran",
         "accused_handle": "",
-        "complainant_name": "Shuma Raha",
-        "complainant_handle": "@ShumaRaha",
+        "accused_des": "",
+        "accused_img": "placeholder-user.png",
+        "accused_url": "",
+        "complainant_name": "Anushree Majumdar",
+        "complainant_handle": "",
+        "complainant_des": "Interns",
+        "complainant_url": "",
+        "year": 2016,
         "industry": "News",
         "context": "Professional",
-        "nature" : ["Not clear"]  }
+        "action_taken": "",
+        "nature": ["Groping", "Unwelcome sexual advances"]
+    }
 }

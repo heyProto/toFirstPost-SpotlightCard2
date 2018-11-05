@@ -10,27 +10,47 @@
         "accused_name": {
           "id": "/properties/data/properties/accused_name",
           "type": "string",
-          "title": "Accused Name"
-        },
-        "accused_org": {
-          "id": "/properties/data/properties/accused_org",
-          "type": "string",
-          "title": "Accused Organisation"
+          "title": "Accused's Name"
         },
         "accused_handle": {
           "id": "/properties/data/properties/accused_handle",
           "type": "string",
-          "title": "Accused Handle"
+          "title": "Accused's Handle"
+        },
+        "accused_des": {
+          "id": "/properties/data/properties/accused_des",
+          "type": "string",
+          "title": "Accused's Designation"
+        },
+        "accused_img": {
+          "id": "/properties/data/properties/accused_img",
+          "type": "string",
+          "title": "Accused's Image URL"
+        },
+        "accused_url": {
+          "id": "/properties/data/properties/accused_url",
+          "type": "string",
+          "title": "Accused's FP URL"
         },
         "complainant_name": {
           "id": "/properties/data/properties/complainant_name",
           "type": "string",
-          "title": "Complainant Name"
+          "title": "Complainant's Name"
         },
         "complainant_handle": {
           "id": "/properties/data/properties/complainant_handle",
           "type": "string",
-          "title": "Complainant Handle"
+          "title": "Complainant's Handle"
+        },
+        "complainant_des": {
+          "id": "/properties/data/properties/complainant_des",
+          "type": "string",
+          "title": "Complainant's Designation"
+        },
+        "complainant_url": {
+          "id": "/properties/data/properties/complainant_url",
+          "type": "string",
+          "title": "Complainant's FP URL"
         },
         "text": {
           "id": "/properties/data/properties/text",
@@ -63,6 +83,11 @@
           "uniqueItems": "true",
           "title": "Nature of harassment"
         },
+        "year": {
+          "id": "/properties/data/properties/year",
+          "type": "number",
+          "title": "Year of Incident"
+        },
         "industry": {
           "id": "/properties/data/properties/industry",
           "type": "string",
@@ -74,8 +99,7 @@
           "type": "string",
           "title": "Context",
           "enum": ["Personal", "Professional", "Not Clear", "Not Applicable"]
-        },
-        
+        }, 
         "reported_on": {
           "id": "/properties/data/properties/reported_on",
           "type": "string",
@@ -95,12 +119,17 @@
         "social_platform": {
           "id": "/properties/data/properties/source_platform",
           "type": "string",
-          "title": "Source Platform"
+          "title": "Social Platform"
         },
         "social_url": {
           "id": "/properties/data/properties/social_url",
           "type": "string",
           "title": "Social URL"
+        },
+        "action_taken": {
+          "id": "/properties/data/properties/action_taken",
+          "type": "string",
+          "title": "Action Taken"
         },
         "created_at": {
           "id": "/properties/data/properties/created_at",

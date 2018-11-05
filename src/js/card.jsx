@@ -63,27 +63,27 @@ export default class toCard extends React.Component {
       return (
         <div
             className="protograph-grid-card protograph-trigger-modal protograph-card">
-            <a href={card.source_url} target="_blank">
               <div className="proto-social-post-card">
                 <div className="post-content">
                 <div className="post-category">
                     <div className="post-category-title">ACCUSED</div>
-                    <div className="post-category-data">{card.accused_name? card.accused_name: 'Unknown'}</div> 
+                    <div className="post-category-data">{card.accused_url ? (<a href={card.accused_url} target="_blank">{card.accused_name}</a>) : (card.accused_name ? card.accused_name : 'Unknown')}</div> 
                   </div>
                   
                 </div>
                 
+                {card.accused_img && (<a href={card.accused_url ? card.accused_url : "#"}><img className="card-image" src={card.accused_img} /></a>)}
                 
                 <div className="post-categories">
 
                   <div className="post-category">
                     <div className="post-category-title">COMPLAINANT</div>
-                    <div className="post-category-data">{card.complainant_name? card.complainant_name: 'Unknown'}</div>
+                    <div className="post-category-data">{card.complainant_url ? (<a href={card.complainant_url} target="_blank">{card.complainant_name}</a>) : (card.complainant_name ? card.complainant_name : 'Unknown')}</div>
                   </div>
 
                   <div className="post-category">
                     <div className="post-category-title">NATURE OF HARASSMENT</div>
-                    <div className="post-category-data">{card.nature && card.nature.length>0? card.nature.join(', '): 'Unknown'}</div>
+                    <div className="post-category-data"><a href="https://p.firstpost.com/stories/dictionary-of-how-we-have-categorized-nature-of-harassment.html" target="_blank" title="Go to dictionary of classification">{card.nature && card.nature.length>0? card.nature.join(', '): 'Unknown'}</a></div>
                   </div>
 
                   
@@ -96,7 +96,6 @@ export default class toCard extends React.Component {
                   {card.social_platform == 'Twitter' && (<a href={card.social_url}><img src="https://cdn.protograph.pykih.com/Assets/social-icons/twitter-outline.png" className="card-social" /></a>)}
                 </div>
               </div>
-            </a>
           </div>
       )
     }
