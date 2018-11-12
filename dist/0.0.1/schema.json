@@ -12,15 +12,15 @@
           "type": "string",
           "title": "Accused's Name"
         },
-        "accused_handle": {
-          "id": "/properties/data/properties/accused_handle",
-          "type": "string",
-          "title": "Accused's Handle"
-        },
         "accused_des": {
           "id": "/properties/data/properties/accused_des",
           "type": "string",
           "title": "Accused's Designation"
+        },
+        "accused_org": {
+          "id": "/properties/data/properties/accused_org",
+          "type": "string",
+          "title": "Accused's Organization"
         },
         "accused_img": {
           "id": "/properties/data/properties/accused_img",
@@ -37,15 +37,15 @@
           "type": "string",
           "title": "Complainant's Name"
         },
-        "complainant_handle": {
-          "id": "/properties/data/properties/complainant_handle",
-          "type": "string",
-          "title": "Complainant's Handle"
-        },
         "complainant_des": {
           "id": "/properties/data/properties/complainant_des",
           "type": "string",
           "title": "Complainant's Designation"
+        },
+        "complainant_org": {
+          "id": "/properties/data/properties/complainant_org",
+          "type": "string",
+          "title": "Complainant's Organization"
         },
         "complainant_url": {
           "id": "/properties/data/properties/complainant_url",
@@ -92,7 +92,7 @@
           "id": "/properties/data/properties/industry",
           "type": "string",
           "title": "Industry",
-          "enum": ["News", "Journalism College", "Films", "Music", "Comedy", "Media", "Not clear"]
+          "enum": ["News", "Journalism College", "Films", "Music", "Comedy", "Art", "Media", "Not clear"]
         },
         "context": {
           "id": "/properties/data/properties/context",
