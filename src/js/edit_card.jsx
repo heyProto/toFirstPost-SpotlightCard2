@@ -8,7 +8,6 @@ export default class editToCard extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      step: 1,
       dataJSON: {},
       publishing: false,
       schemaJSON: undefined,
@@ -21,13 +20,12 @@ export default class editToCard extends React.Component {
 
   exportData() {
     let getDataObj = {
-      step: this.state.step,
       dataJSON: this.state.dataJSON,
       schemaJSON: this.state.schemaJSON,
       optionalConfigJSON: this.state.optionalConfigJSON,
       optionalConfigSchemaJSON: this.state.optionalConfigSchemaJSON
     }
-    getDataObj["name"] = getDataObj.dataJSON.data.name_of_conflict.substr(0,225); // Reduces the name to ensure the slug does not get too long
+    getDataObj["name"] = getDataObj.dataJSON.data.accused_name.substr(0,225); // Reduces the name to ensure the slug does not get too long
     return getDataObj;
   }
 
@@ -81,7 +79,7 @@ export default class editToCard extends React.Component {
   renderSEO() {
     let d = this.state.dataJSON.data;
 
-    let blockquote_string = `<h1>${d.name_of_conflict}</h1><p>${d.nature_of_land_conflict}</p><p>${d.district}</p><p>${d.state}</p><p>${d.type_of_industry}</p><p>${d.summary}</p>`;
+    let blockquote_string = `<h1>${d.accused_name}</h1><p>Complainant: ${d.complainant_name}</p>`;
     let seo_blockquote = '<blockquote>' + blockquote_string + '</blockquote>'
     return seo_blockquote;
   }
@@ -95,68 +93,12 @@ export default class editToCard extends React.Component {
     return data;    
   }
 
-  // renderFormData() {
-
-  //   switch(this.state.step) {
-  //     case 1:
-  //       return this.state.dataJSON.data.title;
-  //       break;
-  //     // Other form data.
-  //     case 2:
-  //       let overview = this.state.dataJSON.data.Overview;
-  //       overview.noHouseholds = parseInt(overview.noHouseholds);
-  //       overview.investment = parseFloat(overview.investment);
-  //       overview.landArea = parseFloat(overview.landArea); 
-  //       return overview;
-  //       break;
-  //     case 3:
-  //       return this.state.dataJSON.data.Details;
-  //       break;
-  //     case 4:
-  //       return this.state.dataJSON.data.Narrative;
-  //       break;    
-  //     case 5: 
-  //       return this.state.dataJSON.data.Sources;
-  //       break;
-  //     case 6:
-  //       return this.state.dataJSON.data.explore_url;
-  //       break;    
-  //   }
-  // }
-
-  showLinkText() {
-    switch(this.state.step) {
-      case 1:
-        return '';
-        break;
-      case 2:
-      case 3:
-      case 4:
-      case 5:
-      case 6:
-        return '< Back';
-        break;
-    }
-  }
-
   showButtonText() {
-    switch(this.state.step) {
-      case 1:
-        return 'Publish';
-        break;
-    }
+    return 'Publish'
   }
 
   getUISchemaJSON() {
     return this.state.uiSchemaJSON.data;
-  }
-
-
-  onPrevHandler() {
-    let prev_step = --this.state.step;
-    this.setState({
-      step: prev_step
-    });
   }
 
   render() {
@@ -180,7 +122,6 @@ export default class editToCard extends React.Component {
                   uiSchema={this.getUISchemaJSON()}
                   formData={this.renderFormData()}>
                   <br/>
-                  <a id="protograph-prev-link" className={`${this.state.publishing ? 'protograph-disable' : ''}`} onClick={((e) => this.onPrevHandler(e))}>{this.showLinkText()} </a>
                   <button type="submit" className={`${this.state.publishing ? 'ui primary loading disabled button' : ''} default-button protograph-primary-button`}>{this.showButtonText()}</button>
                 </JSONSchemaForm>
               </div>
