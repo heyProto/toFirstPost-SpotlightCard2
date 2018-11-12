@@ -1,115 +1,135 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "definitions": {},
-  "id": "http://example.com/example.json",
-  "type": "object",
-  "properties": {
-    "data": {
-      "id": "/properties/data",
-      "properties": {
-        "accused_name": {
-          "id": "/properties/data/properties/accused_name",
-          "type": "string",
-          "title": "Accused Name"
-        },
-        "accused_org": {
-          "id": "/properties/data/properties/accused_org",
-          "type": "string",
-          "title": "Accused Organisation"
-        },
-        "accused_handle": {
-          "id": "/properties/data/properties/accused_handle",
-          "type": "string",
-          "title": "Accused Handle"
-        },
-        "complainant_name": {
-          "id": "/properties/data/properties/complainant_name",
-          "type": "string",
-          "title": "Complainant Name"
-        },
-        "complainant_handle": {
-          "id": "/properties/data/properties/complainant_handle",
-          "type": "string",
-          "title": "Complainant Handle"
-        },
-        "text": {
-          "id": "/properties/data/properties/text",
-          "type": "string",
-          "title": "Text"
-        },
-        "nature": {
-          "id": "/properties/data/properties/nature",
-          "type": "array",
-          "items": {
-            "type":"string",
-            "enum":[
-              "Unwelcome sexual advances",
-              "Groping",
-              "Forced kissing",
-              "Harassment",
-              "Persistent pursuing",
-              "Obscene behaviour",
-              "Ogling",
-              "Sexual assault",
-              "Groping/Touching without consent",
-              "Not clear",
-              "Demanding nude pictures",
-              "Obscene online behaviour",
-              "Humiliating",
-              "Stalking",
-              "Violent behaviour"
-            ]
-          },
-          "uniqueItems": "true",
-          "title": "Nature of harassment"
-        },
-        "industry": {
-          "id": "/properties/data/properties/industry",
-          "type": "string",
-          "title": "Industry",
-          "enum": ["News", "Journalism College", "Films", "Music", "Comedy", "Media", "Not clear"]
-        },
-        "context": {
-          "id": "/properties/data/properties/context",
-          "type": "string",
-          "title": "Context",
-          "enum": ["Personal", "Professional", "Not Clear", "Not Applicable"]
-        },
-        
-        "reported_on": {
-          "id": "/properties/data/properties/reported_on",
-          "type": "string",
-          "title": "Reported On",
-          "enum": ["News Media", "Social Media"]
-        },
-        "news_platform": {
-          "id": "/properties/data/properties/news_platform",
-          "type": "string",
-          "title": "News Platform"
-        },
-        "news_url": {
-          "id": "/properties/data/properties/news_url",
-          "type": "string",
-          "title": "News URL"
-        },
-        "social_platform": {
-          "id": "/properties/data/properties/source_platform",
-          "type": "string",
-          "title": "Source Platform"
-        },
-        "social_url": {
-          "id": "/properties/data/properties/social_url",
-          "type": "string",
-          "title": "Social URL"
-        },
-        "created_at": {
-          "id": "/properties/data/properties/created_at",
-          "type": "string",
-          "title": "Created At"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions":
+    {},
+    "id": "http://example.com/example.json",
+    "type": "object",
+    "properties":
+    {
+        "data":
+        {
+            "id": "/properties/data",
+            "properties":
+            {
+                "accused_name":
+                {
+                    "id": "/properties/data/properties/accused_name",
+                    "type": "string",
+                    "title": "Accused Name"
+                },
+                "accused_org":
+                {
+                    "id": "/properties/data/properties/accused_org",
+                    "type": "string",
+                    "title": "Accused Organisation"
+                },
+                "accused_handle":
+                {
+                    "id": "/properties/data/properties/accused_handle",
+                    "type": "string",
+                    "title": "Accused Handle"
+                },
+                "complainant_name":
+                {
+                    "id": "/properties/data/properties/complainant_name",
+                    "type": "string",
+                    "title": "Complainant Name"
+                },
+                "complainant_handle":
+                {
+                    "id": "/properties/data/properties/complainant_handle",
+                    "type": "string",
+                    "title": "Complainant Handle"
+                },
+                "text":
+                {
+                    "id": "/properties/data/properties/text",
+                    "type": "string",
+                    "title": "Text"
+                },
+                "nature":
+                {
+                    "id": "/properties/data/properties/nature",
+                    "type": "array",
+                    "items":
+                    {
+                        "type": "string",
+                        "enum": [
+                            "Unwelcome sexual advances",
+                            "Groping",
+                            "Forced kissing",
+                            "Harassment",
+                            "Persistent pursuing",
+                            "Obscene behaviour",
+                            "Ogling",
+                            "Sexual assault",
+                            "Groping/Touching without consent",
+                            "Not clear",
+                            "Demanding nude pictures",
+                            "Obscene online behaviour",
+                            "Humiliating",
+                            "Stalking",
+                            "Violent behaviour"
+                        ]
+                    },
+                    "uniqueItems": true,
+                    "title": "Nature of harassment"
+                },
+                "industry":
+                {
+                    "id": "/properties/data/properties/industry",
+                    "type": "string",
+                    "title": "Industry",
+                    "enum": ["News", "Journalism College", "Films", "Music", "Comedy", "Media", "Not clear"]
+                },
+                "context":
+                {
+                    "id": "/properties/data/properties/context",
+                    "type": "string",
+                    "title": "Context",
+                    "enum": ["Personal", "Professional", "Not clear", "Not Applicable"]
+                },
+
+                "reported_on":
+                {
+                    "id": "/properties/data/properties/reported_on",
+                    "type": "string",
+                    "title": "Reported On",
+                    "enum": ["News Media", "Social Media"]
+                },
+                "news_platform":
+                {
+                    "id": "/properties/data/properties/news_platform",
+                    "type": "string",
+                    "title": "News Platform"
+                },
+                "news_url":
+                {
+                    "id": "/properties/data/properties/news_url",
+                    "type": "string",
+                    "title": "News URL"
+                },
+                "social_platform":
+                {
+                    "id": "/properties/data/properties/source_platform",
+                    "type": "string",
+                    "title": "Source Platform"
+                },
+                "social_url":
+                {
+                    "id": "/properties/data/properties/social_url",
+                    "type": "string",
+                    "title": "Social URL"
+                },
+                "created_at":
+                {
+                    "id": "/properties/data/properties/created_at",
+                    "type": "string",
+                    "title": "Created At"
+                }
+            },
+            "title": "Card Data",
+            "type": "object"
         }
-      },
-      "title": "Card Data",
-      "type": "object"
     }
-  }
 }
