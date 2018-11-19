@@ -17,8 +17,6 @@
           "type": "string",
           "title": "Accused's Designation"
         },
-<<<<<<< HEAD
-=======
         "accused_org": {
           "id": "/properties/data/properties/accused_org",
           "type": "string",
@@ -34,7 +32,6 @@
           "type": "string",
           "title": "Accused's FP URL"
         },
->>>>>>> 7421c96b0093acf96f6a93df1a93cfe495f7dc31
         "complainant_name": {
           "id": "/properties/data/properties/complainant_name",
           "type": "string",
@@ -45,8 +42,6 @@
           "type": "string",
           "title": "Complainant's Designation"
         },
-<<<<<<< HEAD
-=======
         "complainant_org": {
           "id": "/properties/data/properties/complainant_org",
           "type": "string",
@@ -57,7 +52,6 @@
           "type": "string",
           "title": "Complainant's FP URL"
         },
->>>>>>> 7421c96b0093acf96f6a93df1a93cfe495f7dc31
         "text": {
           "id": "/properties/data/properties/text",
           "type": "string",
