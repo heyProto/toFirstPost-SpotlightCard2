@@ -71,21 +71,22 @@
               "Obscene behaviour",
               "Ogling",
               "Sexual assault",
+              "Rape",
               "Groping/Touching without consent",
-              "Not clear",
               "Demanding nude pictures",
               "Obscene online behaviour",
               "Humiliating",
               "Stalking",
-              "Violent behaviour"
+              "Violent behaviour",
+              "Not clear"
             ]
           },
-          "uniqueItems": "true",
+          "uniqueItems": true,
           "title": "Nature of harassment"
         },
         "year": {
           "id": "/properties/data/properties/year",
-          "type": "number",
+          "type": "string",
           "title": "Year of Incident"
         },
         "industry": {
