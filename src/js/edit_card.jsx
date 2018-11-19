@@ -25,7 +25,7 @@ export default class editToCard extends React.Component {
       optionalConfigJSON: this.state.optionalConfigJSON,
       optionalConfigSchemaJSON: this.state.optionalConfigSchemaJSON
     }
-    getDataObj["name"] = getDataObj.dataJSON.data.accused_name.substr(0,225); // Reduces the name to ensure the slug does not get too long
+    getDataObj["name"] = (getDataObj.dataJSON.data.accused_name + ' - ' + getDataObj.dataJSON.data.complainant_name).substr(0,225); // Reduces the name to ensure the slug does not get too long
     return getDataObj;
   }
 

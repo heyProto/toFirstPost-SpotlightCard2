@@ -60,7 +60,7 @@ export default class toCard extends React.Component {
       return (<div>Loading</div>)
     } else {
       let card = this.state.dataJSON.data;
-      return (
+      return ( 
         <div
             className="protograph-grid-card protograph-trigger-modal protograph-card">
               <div className="proto-social-post-card">
@@ -72,7 +72,7 @@ export default class toCard extends React.Component {
                   
                 </div>
                 
-                {card.accused_img && (<a href={card.accused_url ? card.accused_url : "#"}><img className="card-image" src={card.accused_img} /></a>)}
+                <div className="card-image-div">{<a href={card.accused_url ? card.accused_url : "#"}><img className="card-image" src={card.accused_img ? card.accused_img : "https://p.firstpost.com/Assets/Accused-img/placeholder-user.png"} /></a>}</div>
                 
                 <div className="post-categories">
 

@@ -139,13 +139,20 @@ a.news-link, a.news-link:hover {
 }
 
 .card-image {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  filter: grayscale(100%) brightness(120%);
+}
+
+.card-image-div {
   border: 3px solid var(--basecol);
   width: 80px;
   height: 80px;
   position: absolute;
   border-radius: 50%;
-  top: 5px;
-  right: 5px;
+  top: 15px;
+  right: 15px;
 }
 
 .protograph-card {
